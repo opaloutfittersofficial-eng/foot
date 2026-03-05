@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Opal Shoes</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial;
+}
+
+body{
+background:#0f0f0f;
+color:white;
+}
+
+/* NAVBAR */
+
+nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 60px;
+background:#111;
+}
+
+.logo{
+font-size:28px;
+font-weight:bold;
+letter-spacing:2px;
+}
+
+nav ul{
+display:flex;
+list-style:none;
+gap:30px;
+}
+
+nav ul li{
+cursor:pointer;
+}
+
+/* HERO */
+
+.hero{
+height:90vh;
+display:flex;
+align-items:center;
+justify-content:center;
+flex-direction:column;
+text-align:center;
+background:linear-gradient(135deg,#1f1f1f,#000);
+animation:fadeIn 2s ease;
+}
+
+.hero h1{
+font-size:60px;
+margin-bottom:20px;
+}
+
+.hero p{
+font-size:20px;
+opacity:0.8;
+}
+
+.shop-btn{
+margin-top:25px;
+padding:15px 35px;
+background:#c59d5f;
+border:none;
+font-size:18px;
+cursor:pointer;
+border-radius:6px;
+transition:0.3s;
+}
+
+.shop-btn:hover{
+transform:scale(1.1);
+}
+
+/* PRODUCTS */
+
+.products{
+padding:80px 10%;
+display:flex;
+gap:40px;
+justify-content:center;
+flex-wrap:wrap;
+}
+
+.card{
+background:#161616;
+width:280px;
+border-radius:10px;
+overflow:hidden;
+transition:0.4s;
+}
+
+.card:hover{
+transform:translateY(-10px);
+box-shadow:0 15px 40px rgba(0,0,0,0.5);
+}
+
+.card img{
+width:100%;
+}
+
+.card-body{
+padding:20px;
+text-align:center;
+}
+
+.price{
+color:#c59d5f;
+font-size:20px;
+margin-top:10px;
+}
+
+.buy-btn{
+margin-top:15px;
+padding:10px 25px;
+border:none;
+background:#c59d5f;
+cursor:pointer;
+border-radius:5px;
+transition:0.3s;
+}
+
+.buy-btn:hover{
+background:#e6b873;
+}
+
+/* FOOTER */
+
+footer{
+text-align:center;
+padding:30px;
+background:#111;
+margin-top:40px;
+}
+
+/* ANIMATION */
+
+@keyframes fadeIn{
+from{
+opacity:0;
+transform:translateY(40px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+</style>
+</head>
+
+<body>
+
+<nav>
+<div class="logo">OPAL SHOES</div>
+<ul>
+<li>Home</li>
+<li>Shop</li>
+<li>Contact</li>
+</ul>
+</nav>
+
+<section class="hero">
+<h1>Luxury Chunky Loafers</h1>
+<p>Premium Style For Modern Gentlemen</p>
+<button class="shop-btn" onclick="scrollToShop()">Shop Now</button>
+</section>
+
+<section class="products" id="shop">
+
+<div class="card">
+<img src="https://i.ibb.co/9mmJGDcw/Gemini-Generated-Image-7cb3ue7cb3ue7cb3.png">
+<div class="card-body">
+<h3>Chunky Loafers Classic</h3>
+<div class="price">PKR 4000</div>
+<button class="buy-btn" onclick="order('Chunky Loafers Classic')">Buy Now</button>
+</div>
+</div>
+
+<div class="card">
+<img src="https://i.ibb.co/Z1v4zMXp/Gemini-Generated-Image-e2vjmze2vjmze2vj.png">
+<div class="card-body">
+<h3>Chunky Loafers Premium</h3>
+<div class="price">PKR 4200</div>
+<button class="buy-btn" onclick="order('Chunky Loafers Premium')">Buy Now</button>
+</div>
+</div>
+
+<div class="card">
+<img src="https://i.ibb.co/spnN42zk/Gemini-Generated-Image-66bm4o66bm4o66bm.png">
+<div class="card-body">
+<h3>Chunky Loafers Elite</h3>
+<div class="price">PKR 4300</div>
+<button class="buy-btn" onclick="order('Chunky Loafers Elite')">Buy Now</button>
+</div>
+</div>
+
+</section>
+
+<footer>
+© 2026 Opal Shoes | Premium Footwear
+</footer>
+
+<script>
+
+function scrollToShop(){
+document.getElementById("shop").scrollIntoView({
+behavior:"smooth"
+});
+}
+
+function order(product){
+alert("You selected: " + product + 
+"\n\nSend payment to: 03169382133\nThen message us your order.");
+}
+
+</script>
+
+</body>
+</html>
